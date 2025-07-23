@@ -59,7 +59,7 @@ A fully responsive and modern portfolio website built using the **MERN stack** (
 
 | Environment | Link |
 |--------------|------|
-| 🟣 Frontend | [https://personal-portfolio-kqjg.vercel.app](https://personal-portfolio-kqjg.vercel.app) |
+| 🟣 Frontend | [https://personal-portfolio-vpfs.vercel.app](https://personal-portfolio-vpfs.vercel.app) |
 | 🟡 Backend API | [https://personal-portfolio-73h0.onrender.com](https://personal-portfolio-73h0.onrender.com) |
 | 🧑‍💻 Admin Dashboard | `/admin` route on frontend (protected) |
 
