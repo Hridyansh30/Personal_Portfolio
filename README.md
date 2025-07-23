@@ -1,6 +1,6 @@
 # 🚀 MERN Stack Portfolio Website with Admin Dashboard & AI Integration
 
-A fully responsive and modern portfolio website built using the **MERN stack** (MongoDB, Express, React, NodeJS). Includes an **Admin Dashboard** for managing portfolio data and integrates **AI features** like **Intent Detection** and **Project Recommendations** using **Ollama**.
+A fully responsive and modern portfolio website built using the **MERN stack** (MongoDB, Express, React, NodeJS). Includes an **Admin Dashboard** for managing portfolio data and integrates **AI features** like **Intent Detection** using **Ollama**.
 
 ## ✨ Features
 
@@ -26,7 +26,6 @@ A fully responsive and modern portfolio website built using the **MERN stack** (
 - Nodemailer integration to send contact emails
 - **Ollama AI Integration**:
     - Intent detection on contact messages
-    - Future-ready AI hooks for project recommendations
 - Admin Authentication using JWT with secure login panel
 - Admin dashboard to **add/edit/delete** portfolio content
 
@@ -42,10 +41,10 @@ A fully responsive and modern portfolio website built using the **MERN stack** (
 
 | Category | Technology |
 |-----------|------------|
-| Frontend | React, Axios, AOS, CSS Modules |
+| Frontend | React, Axios, AOS, CSS |
 | Backend | NodeJS, ExpressJS, Mongoose |
 | Database | MongoDB Atlas |
-| AI | Ollama (phi3/mistral/llama2), OpenAI/Gemini (optional fallback) |
+| AI | Ollama (phi3/mistral/llama2) |
 | Email | Nodemailer (Gmail SMTP) |
 | Hosting | Vercel (Frontend), Render (Backend) |
 | Authentication | JWT |
@@ -60,8 +59,8 @@ A fully responsive and modern portfolio website built using the **MERN stack** (
 
 | Environment | Link |
 |--------------|------|
-| 🟣 Frontend | [https://your-frontend.vercel.app](https://your-frontend.vercel.app) |
-| 🟡 Backend API | [https://your-backend.onrender.com](https://your-backend.onrender.com) |
+| 🟣 Frontend | [https://personal-portfolio-kqjg.vercel.app](https://personal-portfolio-kqjg.vercel.app) |
+| 🟡 Backend API | [https://personal-portfolio-73h0.onrender.com](https://personal-portfolio-73h0.onrender.com) |
 | 🧑‍💻 Admin Dashboard | `/admin` route on frontend (protected) |
 
 ---
@@ -97,5 +96,5 @@ A fully responsive and modern portfolio website built using the **MERN stack** (
 
 ## 📧 Contact
 Created and maintained by Hridyansh Katal | 
-📩 hridyansh@example.com
+📩 hridyanshkatal@gmail.com
 
