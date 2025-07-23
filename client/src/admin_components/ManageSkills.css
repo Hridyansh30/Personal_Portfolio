@@ -1,0 +1,209 @@
+/* ManageSkills.css */
+
+:root {
+  --primary: #6366f1;
+  --accent: #3b82f6;
+  --bg-light: #ffffff;
+  --text-light: #1f2937;
+  --bg-dark: #0f172a;
+  --text-dark: #f9fafb;
+  --card-light: #f3f4f6;
+  --card-dark: #1e293b;
+}
+
+[data-theme="light"] {
+  --bg: var(--bg-light);
+  --text: var(--text-light);
+  --card: var(--card-light);
+}
+
+[data-theme="dark"] {
+  --bg: var(--bg-dark);
+  --text: var(--text-dark);
+  --card: var(--card-dark);
+}
+
+.manage-skills-container {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  flex: 1;
+  padding: 2rem;
+  margin-left: 15rem;
+  margin-top: 5rem;
+  transition: background 0.4s, color 0.4s;
+  overflow: auto;
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.add-skill-form {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.add-skill-form input,
+.add-skill-form button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+}
+
+.add-skill-form input {
+  flex: 1;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--primary);
+}
+
+.add-skill-form button {
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.add-skill-form button:hover {
+  background: var(--accent);
+}
+
+.category-section {
+  margin-bottom: 3rem;
+}
+
+.category-section h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+
+.skill-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
+  position: relative;
+  transition: background 0.4s;
+}
+
+.skill-name {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  background: var(--bg);
+  border: 1px solid var(--primary);
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 200px;
+  height: 20px;
+}
+
+.progress {
+  background: var(--primary);
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.skill-actions {
+  position: relative;
+}
+
+.menu-button {
+  background: none;
+  color: var(--text);
+  padding: 0.4rem 0.7rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.dropdown {
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  background: var(--card);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  z-index: 10;
+}
+
+.dropdown input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary);
+  color: var(--text);
+  background: var(--bg);
+}
+
+.dropdown button {
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.dropdown button:first-of-type {
+  background: #22c55e;
+  color: #fff;
+}
+
+.dropdown button:last-of-type {
+  background: #ef4444;
+  color: #fff;
+}
+
+.dropdown button:first-of-type:hover {
+  background: #16a34a;
+}
+
+.dropdown button:last-of-type:hover {
+  background: #b91c1c;
+}
+
+@media (max-width: 768px) {
+  .add-skill-form {
+    flex-direction: column;
+  }
+  .progress-bar {
+    width: 100%;
+  }
+  .skill-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

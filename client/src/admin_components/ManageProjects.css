@@ -1,0 +1,178 @@
+/* ManageProjects.css */
+
+:root {
+  --primary: #6366f1;
+  --accent: #3b82f6;
+  --bg-light: #ffffff;
+  --text-light: #1f2937;
+  --bg-dark: #0f172a;
+  --text-dark: #f9fafb;
+  --card-light: #f3f4f6;
+  --card-dark: #1e293b;
+}
+
+[data-theme="light"] {
+  --bg: var(--bg-light);
+  --text: var(--text-light);
+  --card: var(--card-light);
+}
+
+[data-theme="dark"] {
+  --bg: var(--bg-dark);
+  --text: var(--text-dark);
+  --card: var(--card-dark);
+}
+
+.manage-projects-container {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 2rem;
+  margin-left: 15rem;
+  margin-top: 5rem;
+  transition: background 0.4s, color 0.4s;
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.add-project-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.add-project-form input,
+.add-project-form button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+}
+
+.add-project-form input {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--primary);
+}
+
+.add-project-form button {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-project-form button:hover {
+  background: var(--accent);
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+.project-card h2 {
+  color: var(--primary);
+  font-size: 1.6rem;
+}
+
+.project-card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+.project-img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 0.75rem;
+  object-fit: cover;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.edit-btn,
+.delete-btn {
+  flex: 1;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #22c55e;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #16a34a;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+/* Modal */
+.edit-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 600px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .manage-projects-container {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}

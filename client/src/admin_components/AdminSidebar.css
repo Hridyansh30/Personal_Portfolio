@@ -1,0 +1,83 @@
+.admin-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: var(--bg);
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  border-right: 2px solid var(--link-container);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 999;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar-logo {
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--link-hover);
+  border-bottom: 2px solid var(--link-container);
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  color: var(--text);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  background: transparent;
+}
+
+.sidebar-link:hover {
+  background: var(--link-container);
+  transform: translateX(5px);
+}
+
+.sidebar-link.active {
+  background: var(--link-hover);
+  color: white;
+  transform: translateX(8px);
+}
+
+.logout-btn {
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.logout-btn:hover {
+  background: crimson;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .admin-sidebar {
+    width: 180px;
+  }
+
+  .sidebar-logo {
+    font-size: 1.4rem;
+  }
+
+  .sidebar-link span {
+    display: none;
+  }
+}

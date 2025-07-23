@@ -1,0 +1,5 @@
+{
+    "scripts": {
+    "start": "concurrently \"npm start --prefix server\" \"npm run dev --prefix client\""
+    }
+}
