@@ -24,7 +24,7 @@ const ManageExperience = () => {
 
   const fetchExperiences = async () => {
     try {
-      const res = await axios.get("http://localhost:5050/api/experience");
+      const res = await axios.get("https://personal-portfolio-73h0.onrender.com/api/experience");
       setExperiences(res.data);
     } catch (err){
         console.log(err);
@@ -38,7 +38,7 @@ const ManageExperience = () => {
     if (!title || !company || !duration || !description) return toast.error("Please fill required fields");
 
     try {
-      await axios.post("http://localhost:5050/api/experience/add", {
+      await axios.post("https://personal-portfolio-73h0.onrender.com/api/experience/add", {
         ...newExperience,
         tech: newExperience.tech.split(",").map((t) => t.trim()).filter(t => t.length > 0),
       }, {
@@ -56,7 +56,7 @@ const ManageExperience = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5050/api/experience/delete/${id}`, {
+      await axios.delete(`https://personal-portfolio-73h0.onrender.com/api/experience/delete/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("adminToken")}`
         }
@@ -73,7 +73,7 @@ const ManageExperience = () => {
     if (!title || !company || !duration || !description) return toast.error("Required fields missing");
 
     try {
-      await axios.patch(`http://localhost:5050/api/experience/update/${editingExperience._id}`, {
+      await axios.patch(`https://personal-portfolio-73h0.onrender.com/api/experience/update/${editingExperience._id}`, {
         title, company, mentor, duration, description,
         tech: tech.split(",").map((t) => t.trim()).filter(t => t.length > 0)
       }, {

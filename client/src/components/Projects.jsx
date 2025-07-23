@@ -22,7 +22,7 @@ const Projects = () => {
   const [modalData, setModalData] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:5050/api/projects")
+    axios.get("https://personal-portfolio-73h0.onrender.com/api/projects")
       .then(res => setProjects(res.data))
       .catch(err => console.error("Error fetching projects:", err));
   }, []);

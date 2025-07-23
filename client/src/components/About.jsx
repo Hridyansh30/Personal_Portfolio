@@ -31,7 +31,7 @@ const About = () => {
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
-    axios.get("http://localhost:5050/api/about")
+    axios.get("https://personal-portfolio-73h0.onrender.com/api/about")
       .then(res => setAbout(res.data))
       .catch(err => console.error("Error fetching About:", err));
   }, []);

@@ -14,7 +14,7 @@ const Skills = () => {
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const res = await axios.get("http://localhost:5050/api/skills");
+        const res = await axios.get("https://personal-portfolio-73h0.onrender.com/api/skills");
         const grouped = res.data.reduce((acc, skill) => {
           const cat = skill.category || "General";
           if (!acc[cat]) acc[cat] = [];

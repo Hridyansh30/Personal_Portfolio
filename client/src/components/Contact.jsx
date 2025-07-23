@@ -33,7 +33,7 @@ const Contact = () => {
     try {
       setLoading(true);
 
-      const response = await axios.post("http://localhost:5050/api/contact", {
+      const response = await axios.post("https://personal-portfolio-73h0.onrender.com/api/contact", {
         name, email, subject, message
       });
 

@@ -20,7 +20,7 @@ const ManageProjects = () => {
 
   const fetchProjects = async () => {
     try {
-      const res = await axios.get("http://localhost:5050/api/projects");
+      const res = await axios.get("https://personal-portfolio-73h0.onrender.com/api/projects");
       setProjects(res.data);
     } catch {
       toast.error("Failed to load projects");
@@ -35,7 +35,7 @@ const ManageProjects = () => {
       features: newProject.features.split(",").map(f => f.trim())
     };
     try {
-      await axios.post("http://localhost:5050/api/projects/add", payload, {
+      await axios.post("https://personal-portfolio-73h0.onrender.com/api/projects/add", payload, {
         headers: { Authorization: `Bearer ${localStorage.getItem("adminToken")}` }
       });
       toast.success("Project added!");
@@ -48,7 +48,7 @@ const ManageProjects = () => {
 
   const deleteProject = async (id) => {
     try {
-      await axios.delete(`http://localhost:5050/api/projects/delete/${id}`, {
+      await axios.delete(`https://personal-portfolio-73h0.onrender.com/api/projects/delete/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("adminToken")}` }
       });
       toast.success("Project deleted!");
@@ -71,7 +71,7 @@ const ManageProjects = () => {
       features: currentProject.features.split(",").map(f => f.trim())
     };
     try {
-      await axios.patch(`http://localhost:5050/api/projects/update/${currentProject._id}`, payload, {
+      await axios.patch(`https://personal-portfolio-73h0.onrender.com/api/projects/update/${currentProject._id}`, payload, {
         headers: { Authorization: `Bearer ${localStorage.getItem("adminToken")}` }
       });
       toast.success("Project updated!");

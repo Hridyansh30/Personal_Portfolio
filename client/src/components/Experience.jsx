@@ -36,7 +36,7 @@ const Experience = () => {
   const [experiences, setExperiences] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5050/api/experience")
+    axios.get("https://personal-portfolio-73h0.onrender.com/api/experience")
       .then(res => setExperiences(res.data))
       .catch(err => console.error("Failed to load experiences:", err));
   }, []);

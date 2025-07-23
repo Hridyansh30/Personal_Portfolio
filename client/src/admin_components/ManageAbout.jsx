@@ -24,7 +24,7 @@ const ManageAbout = () => {
 
   const fetchAbout = async () => {
     try {
-      const res = await axios.get("http://localhost:5050/api/about");
+      const res = await axios.get("https://personal-portfolio-73h0.onrender.com/api/about");
       setAbout(res.data);
       setBio(res.data.bio);
       AOS.refresh();
@@ -35,7 +35,7 @@ const ManageAbout = () => {
 
   const updateBio = async () => {
     try {
-      await axios.patch("http://localhost:5050/api/about/bio/update", { bio }, {
+      await axios.patch("https://personal-portfolio-73h0.onrender.com/api/about/bio/update", { bio }, {
         headers: {
             Authorization: `Bearer ${localStorage.getItem("adminToken")}`
         }
@@ -50,7 +50,7 @@ const ManageAbout = () => {
   const addHobby = async () => {
     if (!newHobby) return;
     try {
-      await axios.patch("http://localhost:5050/api/about/hobbies/add", {
+      await axios.patch("https://personal-portfolio-73h0.onrender.com/api/about/hobbies/add", {
         hobby: newHobby,
       }, { headers: {
             Authorization: `Bearer ${localStorage.getItem("adminToken")}`
@@ -66,7 +66,7 @@ const ManageAbout = () => {
 
   const removeHobby = async (hobby) => {
     try {
-      await axios.patch("http://localhost:5050/api/about/hobbies/delete", { hobby }, 
+      await axios.patch("https://personal-portfolio-73h0.onrender.com/api/about/hobbies/delete", { hobby }, 
         { headers: {
             Authorization: `Bearer ${localStorage.getItem("adminToken")}`
             }
@@ -81,7 +81,7 @@ const ManageAbout = () => {
   const addGoal = async () => {
     if (!newGoal) return;
     try {
-      await axios.patch("http://localhost:5050/api/about/goals/add", {
+      await axios.patch("https://personal-portfolio-73h0.onrender.com/api/about/goals/add", {
         goal: newGoal
       }, { headers: {
             Authorization: `Bearer ${localStorage.getItem("adminToken")}`
@@ -97,7 +97,7 @@ const ManageAbout = () => {
 
   const removeGoal = async (goal) => {
     try {
-      await axios.patch("http://localhost:5050/api/about/goals/delete", {
+      await axios.patch("https://personal-portfolio-73h0.onrender.com/api/about/goals/delete", {
         goal
       }, { headers: {
             Authorization: `Bearer ${localStorage.getItem("adminToken")}`
@@ -115,7 +115,7 @@ const ManageAbout = () => {
     if (!degree || !institution || !year || !score)
       return toast.error("Fill all education fields");
     try {
-      await axios.patch("http://localhost:5050/api/about/education/add", {
+      await axios.patch("https://personal-portfolio-73h0.onrender.com/api/about/education/add", {
         education: newEducation
       }, { headers: {
             Authorization: `Bearer ${localStorage.getItem("adminToken")}`
@@ -131,7 +131,7 @@ const ManageAbout = () => {
 
   const deleteEducation = async (index) => {
     try {
-      await axios.patch("http://localhost:5050/api/about/education/delete", {
+      await axios.patch("https://personal-portfolio-73h0.onrender.com/api/about/education/delete", {
         index
       }, { headers: {
             Authorization: `Bearer ${localStorage.getItem("adminToken")}`

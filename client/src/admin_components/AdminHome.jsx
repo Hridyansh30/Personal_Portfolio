@@ -35,7 +35,7 @@ const DashboardHome = () => {
 
   const fetchCounts = async () => {
     try {
-      const res = await axios.get("http://localhost:5050/api/stats/counts", {
+      const res = await axios.get("https://personal-portfolio-73h0.onrender.com/api/stats/counts", {
         headers: { Authorization: `Bearer ${localStorage.getItem("adminToken")}` }
       });
       setCounts(res.data);
@@ -46,7 +46,7 @@ const DashboardHome = () => {
 
   const fetchContactDist = async (year) => {
   try {
-    const res = await axios.get(`http://localhost:5050/api/stats/contact-year?year=${year}`, {
+    const res = await axios.get(`https://personal-portfolio-73h0.onrender.com/api/stats/contact-year?year=${year}`, {
       headers: { Authorization: `Bearer ${localStorage.getItem("adminToken")}` }
     });
     const formattedData = res.data.map((count, index) => ({
@@ -62,7 +62,7 @@ const DashboardHome = () => {
 
   const fetchSkillsDist = async () => {
     try {
-      const res = await axios.get("http://localhost:5050/api/stats/skills-cat", {
+      const res = await axios.get("https://personal-portfolio-73h0.onrender.com/api/stats/skills-cat", {
         headers: { Authorization: `Bearer ${localStorage.getItem("adminToken")}` }
       });
       setSkillsDist(res.data);
@@ -71,20 +71,9 @@ const DashboardHome = () => {
     }
   };
 
-//   const fetchProjectMonthDist = async () => {
-//     try {
-//       const res = await axios.get("http://localhost:5050/api/stats/projects-year", {
-//         headers: { Authorization: `Bearer ${localStorage.getItem("adminToken")}` }
-//       });
-//       setProjectMonthDist(res.data);
-//     } catch {
-//       toast.error("Failed to fetch project monthly distribution");
-//     }
-//   };
-
   const fetchProjectTechDist = async () => {
     try {
-      const res = await axios.get("http://localhost:5050/api/stats/projects-tech", {
+      const res = await axios.get("https://personal-portfolio-73h0.onrender.com/api/stats/projects-tech", {
         headers: { Authorization: `Bearer ${localStorage.getItem("adminToken")}` }
       });
       setProjectTechDist(res.data);

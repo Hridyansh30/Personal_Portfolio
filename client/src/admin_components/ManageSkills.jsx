@@ -24,7 +24,7 @@ const ManageSkills = () => {
 
   const fetchSkills = async () => {
     try {
-      const res = await axios.get("http://localhost:5050/api/skills");
+      const res = await axios.get("https://personal-portfolio-73h0.onrender.com/api/skills");
       const groupedSkills = res.data.reduce((acc, skill) => {
           const cat = skill.category || "General";
           if (!acc[cat]) acc[cat] = [];
@@ -42,7 +42,7 @@ const ManageSkills = () => {
     const { name, level } = newSkill;
     if (!name || !level) return toast.error("Name and Level are required");
     try {
-      await axios.post("http://localhost:5050/api/skills/add", newSkill, {
+      await axios.post("https://personal-portfolio-73h0.onrender.com/api/skills/add", newSkill, {
         headers: {
             Authorization: `Bearer ${localStorage.getItem("adminToken")}`
         }
@@ -58,7 +58,7 @@ const ManageSkills = () => {
 
   const deleteSkill = async (id) => {
     try {
-      await axios.delete(`http://localhost:5050/api/skills/delete/${id}`, {
+      await axios.delete(`https://personal-portfolio-73h0.onrender.com/api/skills/delete/${id}`, {
         headers: {
             Authorization: `Bearer ${localStorage.getItem("adminToken")}`
             }
@@ -76,7 +76,7 @@ const ManageSkills = () => {
       return toast.error("Invalid level (0-100)");
     try {
       await axios.patch(
-        `http://localhost:5050/api/skills/level/update/${id}`,
+        `https://personal-portfolio-73h0.onrender.com/api/skills/level/update/${id}`,
         { level: newLevel },
         { headers: {
             Authorization: `Bearer ${localStorage.getItem("adminToken")}`
